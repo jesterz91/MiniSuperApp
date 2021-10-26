@@ -20,4 +20,5 @@ extension UIImage {
 
     static let car: UIImage = .init(systemName: "car")!
     static let cart: UIImage = .init(systemName: "cart")!
+    static let plus: UIImage = .init(systemName: "plus")!
 }

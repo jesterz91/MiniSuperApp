@@ -23,6 +23,9 @@
 		9B39C70327285948003F70E6 /* HomeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C70227285948003F70E6 /* HomeWidget.swift */; };
 		9B39C70527285C0D003F70E6 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C70427285C0D003F70E6 /* UIStackView+Extension.swift */; };
 		9B39C707272861E0003F70E6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C706272861E0003F70E6 /* UIView+Extension.swift */; };
+		9B39C70A27287296003F70E6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C70927287296003F70E6 /* CardView.swift */; };
+		9B39C70C27287628003F70E6 /* ActionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C70B27287628003F70E6 /* ActionHeaderView.swift */; };
+		9B39C70E2728805C003F70E6 /* PaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C70D2728805C003F70E6 /* PaymentMethodView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		9B39C70227285948003F70E6 /* HomeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidget.swift; sourceTree = "<group>"; };
 		9B39C70427285C0D003F70E6 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		9B39C706272861E0003F70E6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9B39C70927287296003F70E6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9B39C70B27287628003F70E6 /* ActionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHeaderView.swift; sourceTree = "<group>"; };
+		9B39C70D2728805C003F70E6 /* PaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		9B39C6E827284346003F70E6 /* Finance */ = {
 			isa = PBXGroup;
 			children = (
+				9B39C70827287286003F70E6 /* View */,
 				9B39C6EC27284386003F70E6 /* FinanceViewController.swift */,
 			);
 			path = Finance;
@@ -164,6 +171,16 @@
 			isa = PBXGroup;
 			children = (
 				9B39C70227285948003F70E6 /* HomeWidget.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B39C70827287286003F70E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B39C70B27287628003F70E6 /* ActionHeaderView.swift */,
+				9B39C70927287296003F70E6 /* CardView.swift */,
+				9B39C70D2728805C003F70E6 /* PaymentMethodView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B39C70A27287296003F70E6 /* CardView.swift in Sources */,
 				9B39C6ED27284386003F70E6 /* FinanceViewController.swift in Sources */,
 				9B39C707272861E0003F70E6 /* UIView+Extension.swift in Sources */,
 				9B39C6E727284177003F70E6 /* RootTabBarController.swift in Sources */,
@@ -254,6 +272,8 @@
 				9B39C6D127283E88003F70E6 /* AppDelegate.swift in Sources */,
 				9B39C6F927284E70003F70E6 /* ViewRepresentable.swift in Sources */,
 				9B39C6F727284E52003F70E6 /* ViewControllerRepresentable.swift in Sources */,
+				9B39C70C27287628003F70E6 /* ActionHeaderView.swift in Sources */,
+				9B39C70E2728805C003F70E6 /* PaymentMethodView.swift in Sources */,
 				9B39C6F0272843A5003F70E6 /* HomeViewController.swift in Sources */,
 				9B39C6D327283E88003F70E6 /* SceneDelegate.swift in Sources */,
 				9B39C70327285948003F70E6 /* HomeWidget.swift in Sources */,
