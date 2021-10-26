@@ -20,6 +20,9 @@
 		9B39C6F927284E70003F70E6 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C6F827284E70003F70E6 /* ViewRepresentable.swift */; };
 		9B39C6FB27284F04003F70E6 /* PreviewDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C6FA27284F04003F70E6 /* PreviewDevice+Extension.swift */; };
 		9B39C700272858AD003F70E6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9B39C6FF272858AD003F70E6 /* SnapKit */; };
+		9B39C70327285948003F70E6 /* HomeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C70227285948003F70E6 /* HomeWidget.swift */; };
+		9B39C70527285C0D003F70E6 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C70427285C0D003F70E6 /* UIStackView+Extension.swift */; };
+		9B39C707272861E0003F70E6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39C706272861E0003F70E6 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		9B39C6F627284E52003F70E6 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		9B39C6F827284E70003F70E6 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		9B39C6FA27284F04003F70E6 /* PreviewDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewDevice+Extension.swift"; sourceTree = "<group>"; };
+		9B39C70227285948003F70E6 /* HomeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidget.swift; sourceTree = "<group>"; };
+		9B39C70427285C0D003F70E6 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		9B39C706272861E0003F70E6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 		9B39C6EE27284397003F70E6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9B39C7012728592D003F70E6 /* View */,
 				9B39C6EF272843A5003F70E6 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -127,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				9B39C6F2272844D9003F70E6 /* UIImage+Extension.swift */,
+				9B39C70427285C0D003F70E6 /* UIStackView+Extension.swift */,
+				9B39C706272861E0003F70E6 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -149,6 +158,14 @@
 				9B39C6F827284E70003F70E6 /* ViewRepresentable.swift */,
 			);
 			path = Preview;
+			sourceTree = "<group>";
+		};
+		9B39C7012728592D003F70E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B39C70227285948003F70E6 /* HomeWidget.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,15 +245,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B39C6ED27284386003F70E6 /* FinanceViewController.swift in Sources */,
+				9B39C707272861E0003F70E6 /* UIView+Extension.swift in Sources */,
 				9B39C6E727284177003F70E6 /* RootTabBarController.swift in Sources */,
 				9B39C6FB27284F04003F70E6 /* PreviewDevice+Extension.swift in Sources */,
 				9B39C6F3272844D9003F70E6 /* UIImage+Extension.swift in Sources */,
 				9B39C6EB27284379003F70E6 /* ProfileViewController.swift in Sources */,
+				9B39C70527285C0D003F70E6 /* UIStackView+Extension.swift in Sources */,
 				9B39C6D127283E88003F70E6 /* AppDelegate.swift in Sources */,
 				9B39C6F927284E70003F70E6 /* ViewRepresentable.swift in Sources */,
 				9B39C6F727284E52003F70E6 /* ViewControllerRepresentable.swift in Sources */,
 				9B39C6F0272843A5003F70E6 /* HomeViewController.swift in Sources */,
 				9B39C6D327283E88003F70E6 /* SceneDelegate.swift in Sources */,
+				9B39C70327285948003F70E6 /* HomeWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
