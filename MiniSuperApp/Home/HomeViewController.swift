@@ -7,7 +7,12 @@
 
 import UIKit
 
+import RxSwift
+import SnapKit
+
 final class HomeViewController: UIViewController {
+
+    private let disposeBag: DisposeBag = DisposeBag()
 
     private let widgetStackView: UIStackView = {
         let view = UIStackView()
@@ -18,9 +23,14 @@ final class HomeViewController: UIViewController {
         return view
     }()
 
+    private let taxiWidget = HomeWidget(image: .car, title: "슈퍼택시")
+
+    private let cartWidget = HomeWidget(image: .cart, title: "슈퍼마트")
+
     init() {
         super.init(nibName: nil, bundle: nil)
         setupViews()
+        bind()
     }
 
     required init?(coder: NSCoder) {
@@ -35,15 +45,24 @@ final class HomeViewController: UIViewController {
             selectedImage: .houseFill
         )
         view.backgroundColor = .lightGray
-
         view.addSubview(widgetStackView)
-
-        widgetStackView.addArrangedSubviews(
-            HomeWidget(image: .car, title: "슈퍼택시"),
-            HomeWidget(image: .cart, title: "슈퍼마트")
-        )
+        widgetStackView.addArrangedSubviews(taxiWidget, cartWidget)
         widgetStackView.snp.makeConstraints {
             $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
+    }
+
+    private func bind() {
+        taxiWidget.didTapWidget
+            .subscribe(onNext: {
+                print("슈퍼 택시")
+            })
+            .disposed(by: disposeBag)
+
+        cartWidget.didTapWidget
+            .subscribe(onNext: {
+                print("슈퍼 마트")
+            })
+            .disposed(by: disposeBag)
     }
 }

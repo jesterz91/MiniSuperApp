@@ -7,7 +7,12 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 final class FinanceViewController: UIViewController {
+
+    private let disposeBag: DisposeBag = DisposeBag()
 
     private let scrollView: UIScrollView = UIScrollView()
 
@@ -44,6 +49,7 @@ final class FinanceViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         setupViews()
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -79,5 +85,25 @@ final class FinanceViewController: UIViewController {
         addPaymentMethodButton.snp.makeConstraints {
             $0.height.equalTo(50)
         }
+    }
+
+    private func bind() {
+        balanceHeaderView.didTapAction
+            .subscribe(onNext: {
+                print("슈퍼페이 충전")
+            })
+            .disposed(by: disposeBag)
+
+        accountHeaderView.didTapAction
+            .subscribe(onNext: {
+                print("카드/계좌 전체보기")
+            })
+            .disposed(by: disposeBag)
+
+        addPaymentMethodButton.rx.tap
+            .subscribe(onNext: {
+                print("결제방법 추가")
+            })
+            .disposed(by: disposeBag)
     }
 }

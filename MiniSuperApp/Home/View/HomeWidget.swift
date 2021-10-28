@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
 import SnapKit
 
 final class HomeWidget: UIStackView {
@@ -24,6 +26,12 @@ final class HomeWidget: UIStackView {
         view.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         return view
     }()
+
+    private var didTapWidgetPublisher: PublishSubject<Void> = PublishSubject()
+
+    var didTapWidget: Observable<Void> {
+        return didTapWidgetPublisher
+    }
 
     init(image: UIImage, title: String) {
         super.init(frame: .zero)
@@ -43,7 +51,7 @@ final class HomeWidget: UIStackView {
         isLayoutMarginsRelativeArrangement = true
         layoutMargins = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
 
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTap))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(widgetDidTap))
         addGestureRecognizer(tap)
 
         addArrangedSubviews(imageView, titleLabel)
@@ -60,8 +68,12 @@ final class HomeWidget: UIStackView {
         titleLabel.text = title
     }
 
-    @objc private func didTap() {
-        print("HomeWidget did Tap")
+    @objc private func widgetDidTap() {
+        didTapWidgetPublisher.onNext(())
+    }
+
+    deinit {
+        didTapWidgetPublisher.onCompleted()
     }
 }
 

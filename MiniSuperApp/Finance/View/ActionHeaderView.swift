@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 final class ActionHeaderView: UIStackView {
 
     private let titleLabel: UILabel = {
@@ -25,6 +28,10 @@ final class ActionHeaderView: UIStackView {
 
     override var intrinsicContentSize: CGSize {
         return CGSize(width: UIView.noIntrinsicMetric, height: 50)
+    }
+
+    var didTapAction: Observable<Void> {
+        return actionButton.rx.tap.asObservable()
     }
 
     init(title: String, action: String) {
